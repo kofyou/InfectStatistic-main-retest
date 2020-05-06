@@ -580,7 +580,8 @@ public class InfectStatistic
 					}
 				}
 			}			
-			out.write("\n");
+			out.write("\r\n");
+			//out.newLine();
 			System.out.println();
 			tempJunitString = tempJunitString + "\n";
 			junitTest.add(tempJunitString);
@@ -664,16 +665,19 @@ public class InfectStatistic
 				//System.out.print(tempJunitString);
 			}
 			*///最后一行是否有\n		
-			out.write("\n");
+			out.write("\r\n");
+			//out.newLine();
 			System.out.println();
 			tempJunitString = tempJunitString + "\n";
 			//System.out.print(tempJunitString);
 			junitTest.add(tempJunitString);
 		}// 该文档并非真实数据，仅供测试使用
 		out.write("// 该文档并非真实数据，仅供测试使用");
+		out.flush();
 		System.out.print("// 该文档并非真实数据，仅供测试使用");
 		junitTest.add("// 该文档并非真实数据，仅供测试使用");
 		out.close();
+		
 		/*
 		for(String tt:junitTest)
 		{
